@@ -1,0 +1,35 @@
+Group Project (4-5 students each)
+Deadline: 30th April 2023
+Marks: 100
+
+Reference blogs for basic data cleaning (You are expected to do much better):
+
+	https://realpython.com/python-data-cleaning-numpy-pandas/
+	https://towardsdatascience.com/how-to-clean-your-data-in-python-8f178638b98d
+
+Pick up a dataset from your organization spread across multiple tables (ideally 2-3)
+Anonymize it to hide sensitive information
+Perform data cleaning:
+	Remove duplicates
+	Deal with null values
+	Standardize it
+	Club it with some public data
+	Merge it
+	Generate new features
+	Generate interesting insights
+
+Code cleanliness, modularity, and reuse
+Code efficiency (Perform secondary reseach to learn more)
+Quality of data cleaning and justifications
+Quality of insights
+KPIs you can extract from it (Perform secondary reseach for industry specific KPIs)
+
+Your submission should comprise of:
+	Data files
+	.py Python file
+	Brief document with details of what you did and why you did it
+
+How to work as a team:
+	Choose a group leader who will allocate tasks
+	Tasks will include attempting a sub task and code review of your peer
+	Use Github for version controlling and collaboration among your group (https://www.w3schools.com/git/default.asp?remote=github)
