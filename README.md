@@ -26,5 +26,39 @@ Finally, we will create interactive maps that display information about the list
 Overall, this project will provide valuable insights to Airbnb hosts in Lisbon city on how to optimize their listings and maximize their revenue.
 
 
+# Goal: Identify the most popular neighborhoods for Airbnb listings in Lisbon city.
+Objective: Analyze the number of listings and their average price in each neighborhood.
 
+# Tasks:
 
+Use pandas to load and clean the listings.csv file.
+Merge the neighborhood data from the neighborhoods.csv file with the listings data.
+Calculate the number of listings and their average price in each neighborhood.
+Visualize the results using matplotlib or seaborn.
+Goal: Determine the seasonality of Airbnb listings and prices in Lisbon city.
+Objective: Identify any patterns or trends in the number of listings and their average price over the past 12 months.
+
+# Tasks:
+
+Use pandas to load and clean the calendar.csv file.
+Analyze the number of listings and their average price on a monthly basis.
+Visualize the results using matplotlib or seaborn.
+Determine if there are any seasonal patterns or trends in the data.
+Goal: Explore the relationship between listing attributes and price.
+Objective: Analyze the relationship between the number of bedrooms, bathrooms, and amenities of a listing and its price.
+
+# Tasks:
+
+Use pandas to load and clean the listings.csv file.
+Select the relevant features for analysis, such as the number of bedrooms, bathrooms, and amenities.
+Visualize the relationship between the features and listing price using scatterplots and histograms.
+Calculate correlation coefficients to measure the strength of the relationships.
+Goal: Analyze the distribution of listing prices in Lisbon city.
+Objective: Identify the range of listing prices and the most common price points in Lisbon.
+
+# Tasks:
+
+Use pandas to load and clean the listings.csv file.
+Analyze the distribution of listing prices using histograms and boxplots.
+Identify the range of prices and the most common price points.
+Compare the distribution of prices across different neighborhoods in Lisbon.
