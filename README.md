@@ -27,7 +27,12 @@ Overall, this project will provide valuable insights to Airbnb hosts in Lisbon c
 
 
 # Goal: Identify the most popular neighborhoods for Airbnb listings in Lisbon city.  
-Objective: Analyze the number of listings and their average price in each neighborhood.  
+
+# Objective: 
+Identify the popular neighborhoods for Airbnb listings in Lisbon and the average price of listings in those neighborhoods.  
+Determine if there are any seasonal patterns or trends in the number of Airbnb listings and their average price in Lisbon.  
+Identify any correlation between the number of bedrooms, bathrooms, and amenities of a listing and its price in Lisbon.  
+Identify the range of listing prices and the most common price points in Lisbon.  
 
 # Tasks:
 
