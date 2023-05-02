@@ -1,0 +1,102 @@
+import csv
+
+# Define the input and output filenames
+input_filename = "calendar.csv"
+output_filename_prefix = "calendar_chunk_"
+
+# Define the maximum number of rows per output file
+max_rows = 900000
+
+# Define the replacements
+replacements = {"t": "Yes", "f": "No"}
+
+# Open the input file and create a CSV reader
+with open(input_filename, "r", newline="") as input_file:
+    reader = csv.reader(input_file)
+
+    # Read the header row
+    header = next(reader)
+
+    # Open the first output file
+    output_file_num = 1
+    output_filename = f"{output_filename_prefix}{output_file_num}.csv"
+    output_file = open(output_filename, "w", newline="")
+    writer = csv.writer(output_file)
+
+    # Write the header row to the output file
+    writer.writerow(header)
+
+    # Process each row in the input file
+    num_rows = 1
+    for row in reader:
+        # Apply the replacements to the row
+        new_row = []
+        for cell in row:
+            if cell in replacements:
+                new_row.append(replacements[cell])
+            else:
+                new_row.append(cell)
+
+        # Write the modified row to the output file
+        writer.writerow(new_row)
+
+        # If we've reached the maximum number of rows per output file, close the current file
+        # and open a new one
+        if num_rows % max_rows == 0:
+            output_file.close()
+            output_file_num += 1
+            output_filename = f"{output_filename_prefix}{output_file_num}.csv"
+            output_file = open(output_filename, "w", newline="")
+            writer = csv.writer(output_file)
+            writer.writerow(header)
+
+        num_rows += 1
+
+    # Close the last output file
+    output_file.close()
+
+
+
+
+import pandas as pd
+
+# Read in each CSV file
+df1 = pd.read_csv('listings_1.csv')
+df2 = pd.read_csv('listings_2.csv')
+df3 = pd.read_csv('listings_3.csv')
+
+# Replace "t" with "Yes" and "f" with "False" in the "has_availability" column
+df1['has_availability'] = df1['has_availability'].replace({'t': 'Yes', 'f': 'False'})
+df2['has_availability'] = df2['has_availability'].replace({'t': 'Yes', 'f': 'False'})
+df3['has_availability'] = df3['has_availability'].replace({'t': 'Yes', 'f': 'False'})
+
+# Replace "t" with "Yes" and "f" with "False" in the "instant_bookable" column
+df1['instant_bookable'] = df1['instant_bookable'].replace({'t': 'Yes', 'f': 'False'})
+df2['instant_bookable'] = df2['instant_bookable'].replace({'t': 'Yes', 'f': 'False'})
+df3['instant_bookable'] = df3['instant_bookable'].replace({'t': 'Yes', 'f': 'False'})
+
+# Remove duplicates
+df1.drop_duplicates(inplace=True)
+df2.drop_duplicates(inplace=True)
+df3.drop_duplicates(inplace=True)
+
+# Fill empty values with 0
+df1.fillna(0, inplace=True)
+df2.fillna(0, inplace=True)
+df3.fillna(0, inplace=True)
+
+# Replace place names
+df1.replace({'Almada, SetÃƒÂºbal, Portugal': 'Almada, Setubal, Portugal', 'Lisboa, Portugal': 'Lisbon, Portugal'}, inplace=True)
+df2.replace({'Almada, SetÃƒÂºbal, Portugal': 'Almada, Setubal, Portugal', 'Lisboa, Portugal': 'Lisbon, Portugal'}, inplace=True)
+df3.replace({'Almada, SetÃƒÂºbal, Portugal': 'Almada, Setubal, Portugal', 'Lisboa, Portugal': 'Lisbon, Portugal'}, inplace=True)
+
+# Remove "$" sign from price column
+df1['price'] = df1['price'].str.replace('$', '')
+df2['price'] = df2['price'].str.replace('$', '')
+df3['price'] = df3['price'].str.replace('$', '')
+
+# Save the updated CSV files
+df1.to_csv('listings_1_final.csv', index=False)
+df2.to_csv('listings_2_final.csv', index=False)
+df3.to_csv('listings_3_final.csv', index=False)
+
