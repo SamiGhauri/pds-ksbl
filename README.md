@@ -13,7 +13,7 @@ Time-Series Analysis: We will analyze the calendar data and identify patterns in
 Geospatial Analysis: We will create interactive maps that display information about the listings' location and price. This analysis will help us understand the distribution of listings in Lisbon city and identify neighborhoods that are popular with guests.  
 
 # Description:
-This project aims to provide insights to Airbnb hosts in Lisbon city on how to optimize their listings and maximize their revenue. The project will analyze the Airbnb data for Lisbon city, including detailed listings data, calendar data, and review data. The analysis will cover five main areas, including data cleaning and preparation, exploratory data analysis, basic statistics, time-series analysis, and geospatial analysis.  
+This project aims to provide insights to Airbnb hosts in Lisbon city on how to optimize their listings and maximize their revenue. The project will analyze the Airbnb data for Lisbon city, including detailed listings data, calendar data, neighborhood data. The analysis will cover five main areas, including data cleaning and preparation, exploratory data analysis, basic statistics, time-series analysis, and geospatial analysis.  
 
 The analysis will begin with cleaning and preparing the data, ensuring that all numerical values are stored as floats or integers and all categorical variables are stored as strings. Once the data is cleaned and prepared, we will perform exploratory data analysis to gain insights into the distribution of variables and identify patterns and trends.  
 
